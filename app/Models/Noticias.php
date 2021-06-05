@@ -4,10 +4,20 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Noticias extends Model {
 
+/**
+ * Noticias
+ */
+class Noticias extends Model 
+{ 
+    /**
+     * @var string
+     */
     protected $table = 'noticias';
 
+    /**
+     * @var array
+     */
     protected $fillable = [
         'titulo',
         'subtitulo',
@@ -16,4 +26,23 @@ class Noticias extends Model {
         'dt_publicacao',
         'st_ativo',
     ];
+
+    /**
+     * @var array
+     */
+    protected array $rules = [
+        'titulo' => 'required|min:10|max:100|alpha',
+        'subtitulo'  => 'required|min:10|max:150|alpha',
+        'descricao' => 'required|min:50',
+        'autor_id' => 'required|numeric',
+        'dt_publicacao' => 'required|date_format:Y-m-d H:i:s',
+    ];
+
+    /**
+     * @return void
+     */
+    public function imagens()
+    {
+        return $this->hasMany(Imagens::class);
+    }
 }
