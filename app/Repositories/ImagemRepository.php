@@ -12,12 +12,12 @@ class ImagemRepository extends AbstractRepository
     /**
      * Lista imagens pela notícia
      *
-     * @param int $noticia_id
+     * @param int $noticiaId
      * @return array
      */
-    public function findByNoticia(int $noticia_id): array
+    public function findByNoticia(int $noticiaId): array
     {
-        return $this->model::where('noticia_id'. $noticia_id)
+        return $this->model::where('noticia_id'. $noticiaId)
             ->get()
             ->toArray();
     }
@@ -25,12 +25,12 @@ class ImagemRepository extends AbstractRepository
     /**
      * Deleta todas as imagens de uma notícia
      *
-     * @param integer $noticia_id
+     * @param integer $noticiaId
      * @return boolean
      */
-    public function deleteByNoticia(int $noticia_id):bool
+    public function deleteByNoticia(int $noticiaId):bool
     {
-        return !!$this->model::where('noticia_id', $noticia_id)
+        return !!$this->model::where('noticia_id', $noticiaId)
             ->delete();
     }
 }

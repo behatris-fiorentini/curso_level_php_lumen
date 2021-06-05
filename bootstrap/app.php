@@ -91,7 +91,10 @@ $app->configure('app');
 |
 */
 
-// $app->register(App\Providers\AppServiceProvider::class);
+$app->register(App\Providers\AppServiceProvider::class);
+$app->register(App\Providers\AutorServiceProvider::class);
+$app->register(App\Providers\NoticiaServiceProvider::class);
+$app->register(App\Providers\ImagemServiceProvider::class);
 // $app->register(App\Providers\AuthServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
 

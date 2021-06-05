@@ -11,7 +11,7 @@ abstract class AbstractService implements ServiceInterface
 {
 
     public function __construct(
-        protected RepositoryInterface $repository;
+        protected RepositoryInterface $repository,
     )
     {}
 
@@ -21,6 +21,7 @@ abstract class AbstractService implements ServiceInterface
      */
     public function create(array $data): array
     {
+        dd('abstract');
         return $this->repository->create($data);
     }
 
