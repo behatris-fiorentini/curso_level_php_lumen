@@ -10,8 +10,8 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * Noticias
  */
-class Noticias extends Model 
-{ 
+class Noticia extends Model
+{
     /**
      * @var string
      */

@@ -9,13 +9,13 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * Imagens
  */
-class Imagens extends Model 
-{    
+class Imagem extends Model
+{
     /**
      * @var string
      */
     protected $table = 'imagens';
-    
+
     /**
      * @var array
      */
@@ -32,6 +32,6 @@ class Imagens extends Model
     public array $rules = [
         'imagem' => 'required',
         'descricao' => 'required|min:10|max:250',
-        'noticia_id' => 'required|numeric', 
+        'noticia_id' => 'required|numeric',
     ];
 }

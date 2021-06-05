@@ -9,13 +9,13 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * Autores
  */
-class Autores extends Model 
-{    
+class Autor extends Model
+{
     /**
      * @var string
      */
     protected $table = 'autores';
-    
+
     /**
      * @var array
      */
@@ -27,7 +27,7 @@ class Autores extends Model
         'sexo',
         'st_ativo',
     ];
-    
+
     /**
      * @var array
      */
